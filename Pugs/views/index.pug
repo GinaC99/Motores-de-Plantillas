@@ -1,0 +1,13 @@
+html
+    head
+        title= 'hey esta es un prueba'
+    body
+        h1='Ingrese los productos a adicionar'
+        form(action="/productos" method= 'post')
+            input(type="text" name="title" placeholder="title")
+            input(type="number" name="price" placeholder="price")
+            input(type="text" name="thumbnail" placeholder="thumbnail")
+            button='Guardar Productos'
+
+    a(href="/productos") 
+        button='Ver productos'

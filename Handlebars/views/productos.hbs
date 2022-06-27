@@ -7,14 +7,12 @@
       <th>Precio</th>
       <th>IMG</th>
     </tr>
-    {{!-- {{#if (productos.length) }}
-    {{!-- {{#each (productos)}} --}}
     <tr>
       {{#if productos.length}}
       {{#each productos}}
       <td>{{title}}</td>
       <td>{{price}}</td>
-      <td><img height="72px" width="72px" src={{this.thumbnail}} /></td>
+      <td><img height="72px" width="72px" src={{thumbnail}} /></td>
     </tr>
     {{/each}}
      {{/if}}

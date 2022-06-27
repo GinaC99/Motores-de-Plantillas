@@ -1,0 +1,22 @@
+html
+    head
+        title= 'hey esta es un prueba'
+    body
+        h1='Estos son los productos'
+        table.table-striped
+            tr
+                th='Titulo'
+                th='Pecio'
+                th='IMG'
+            if productos
+                each products in productos
+                    tr
+                        td= products.title
+                        td= products.price
+                        td
+                            img(src=products.thumbnail height="72px" width="72px")
+                
+            
+
+    a(href="/") 
+        button='Volver al formulario de carga'
