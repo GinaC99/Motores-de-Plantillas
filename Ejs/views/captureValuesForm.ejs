@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Plantillas Ejs</title>
+</head>
+<body>
+    <h1>
+        Por favor ingresa un nuevo producto
+    </h1>
+    <form action="/productos" method="post">
+        <input type="text" name="title" placeholder="title" />
+        <input type="number" name="price" placeholder="price" />
+        <input type="text" name="thumbnail" placeholder="thumbnail" />
+        <button type="submit">Guardar los producto</button>
+    </form>
+    
+    <a href="/productos"><button>Ver productos</button></a>
+</body>
+</html>
