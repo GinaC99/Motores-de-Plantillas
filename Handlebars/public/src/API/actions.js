@@ -4,7 +4,27 @@ class Contenedor {
     constructor() {
         this.ruta = `./gina.txt`;
     }
+    async mensaje(Mensaje) {
+        const data = []
+        try {
+            const allMesgs = await this.allMessages()
+            data.push((allMesgs[0]))
+            data.push(Mensaje)
+            const archivo = await fs.promises.writeFile(`./MensajesUser.txt`, JSON.stringify(data))
+        } catch (e) {
+            data.push(Mensaje)
+            await fs.promises.writeFile(`./MensajesUser.txt`, '')
+            const archivo = await fs.promises.writeFile(`./MensajesUser.txt`, JSON.stringify(data))
+        }
 
+    }
+    async allMessages() {
+        const mensajes = await fs.promises.readFile(`./MensajesUser.txt`)
+        return (JSON.parse(mensajes))
+        // if (mensajes) {
+        //     return mensajes
+        // }/*  */
+    }
     async save(Objeto) {
         try {
             let producto = []

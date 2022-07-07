@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSockets</title>
+</head>
+
+<body>
+    <h1>Ingrese un producto</h1>
+    <form action= "/productos/postData" method="post">
+        <div>
+            <label>Title</label>
+            <input type="text" name="title">
+        </div>
+        <div>
+            <label>Thumbnail</label>
+            <input type="text" name="thumbnail">
+        </div>
+        <div>
+            <label>Price</label>
+            <input type="text" name="price">
+        </div>
+        <div>
+            <button type="submit">Agregar Producto</button>
+        </div>
+    </form>
+    <h1>Ingrese un mensaje</h1>
+    <form action="/productos/posMesg" method="post">
+        <div>
+            <label>Email</label>
+            <input type="email" name="correo">
+        </div>
+        <div>
+            <label>Mensaje</label>
+            <input type="text" name="mensaje">
+        </div>
+        <div>
+            <button type="submit">Agregar Producto</button>
+        </div>
+    </form>
+    <h2>Estos son los productos</h2>
+    <div id='productos'></div>
+    <h2>Estos son los mensajes</h2>
+    <div id='mensajes'></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src='index.js'></script>
+</body>
+
+</html>
